@@ -33,7 +33,7 @@ services:
     environment:
       - HOST=localhost
       - PROTOCOL=http
-      - PORT=3000
+      - PORT=8123
       - APP_ENV=production
       - REDIS_HOST=automatisch-redis
       - POSTGRES_HOST=automatisch-postgres
@@ -44,7 +44,7 @@ services:
       - WEBHOOK_SECRET_KEY=<<YourWEBHOOKsecretKey>>
       - APP_SECRET_KEY=<<YourAPPsecretKey>>
     ports:
-      - '8123:3000'
+      - '8123:8123'
     volumes:
       - /docker/zapier/automatisch/automatisch_storage:/automatisch/storage
     restart: unless-stopped
