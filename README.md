@@ -33,7 +33,8 @@ services:
     environment:
       - HOST=localhost
       - PROTOCOL=http
-      - PORT=8123
+      - PORT=8123                                 # Default=3000    - Custom Port. Change this & both sides of the ports mapping 3000:3000 -> 8123:8123
+      #- WEB_APP_URL=http://192.168.2.222:8123    # Default=Not Set - Use this to set the OAuth Redirect URL. Necessary if you are not on the localhost machine Use your Server's IP & the port above
       - APP_ENV=production
       - REDIS_HOST=automatisch-redis
       - POSTGRES_HOST=automatisch-postgres
