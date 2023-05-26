@@ -4,7 +4,7 @@ Since we're using the image instead of building it at start like the github uses
 You also have to set a variable for `ENCRYPTION_KEY`, `WEBHOOK_SECRET_KEY`, & `APP_SECRET_KEY` or it won't work <br>
 - I've changed the exposed port & changed the containers names because I hate things that are just "main" & "worker"
 - I've added the `container_name` variable as I always prefer to have those declared
-- I've made everything a Bind Mount instead of Volumes because I think Volumes are dumb for most people's usecase. <h6>Other's disagree on that but if you prefer volumes use the lines from the original</h6>
+- I've made everything a Bind Mount instead of Volumes because I think Volumes are dumb for most people's usecase. & definitely for my own. <h6>Other's disagree on that but if you prefer volumes use the lines from the original</h6>
 - I've added my Watchtower labels for updates. You will need to adjust those to your own setup, but if you don't use it it won't cause a problem
 - I've also unified the order the way I like it to maintain consistency with my other stacks
   - ###### image - container_name - depends_on - environment - ports - volumes - restart - healthcheck - labels <br>
